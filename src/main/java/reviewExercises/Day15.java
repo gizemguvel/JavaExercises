@@ -30,6 +30,31 @@ public class Day15 {
         ages.remove((Integer) 5);
         System.out.println("ages = " + ages);
 
+        //Example 3: Create a String list, add 5 elements into it, remove the elements whose length is less than 6
+        List<String> countries=new ArrayList<>();
+        countries.add("Turkey");
+        countries.add("UK");
+        countries.add("USA");
+        countries.add("Germany");
+        countries.add("France");
+
+//        for(int i=0;i<countries.size();i++) {
+//            if (countries.get(i).length() < 6) {
+//                countries.remove(i);
+//                i--;
+//            }
+//        }
+        System.out.println("countries = " + countries);
+
+        List<String> clonedCountries=new ArrayList<>(countries);
+        System.out.println("clonedCountries = " + clonedCountries);
+
+
+        for (String w:clonedCountries){
+            if(w.length()<6){
+                countries.remove(w);
+            }
+        }System.out.println("countries = " + countries);
 
     }
 }
