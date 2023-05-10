@@ -31,5 +31,37 @@ public class Day15_02 {
            }
         System.out.println(numbers);
 
-    }}
+
+        //Example 2: Create an Integer list and remove the duplicated elements
+        List<Integer> ages=new ArrayList<>();
+        ages.add(5);
+        ages.add(10);
+        ages.add(9);
+        ages.add(16);
+        ages.add(54);
+        ages.add(54);
+        ages.add(9);
+        System.out.println("ages = " + ages);
+
+//        List<Integer> noDuplication=new ArrayList<>();
+//
+//        for (int w:ages){
+//            if(!noDuplication.contains(w)){
+//                noDuplication.add(w);
+//            }
+//        }
+//        System.out.println("noDuplication = " + noDuplication);
+
+        for(int i=0; i<ages.size(); i++){
+
+            if(ages.indexOf(ages.get(i))!=ages.lastIndexOf(ages.get(i))){
+                ages.remove(i);
+                i--;
+            }
+        }
+        System.out.println("ages = " + ages);
+
+
+    }
+}
 
