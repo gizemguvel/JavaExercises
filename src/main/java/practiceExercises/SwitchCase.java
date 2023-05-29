@@ -93,9 +93,53 @@ public class SwitchCase {
 //    Question 4:
 //    Write a Java program using a switch case that takes a grade (A, B, C, D, or F) as input and prints the corresponding description
 //    (Excellent, Good, Average, Below Average, or Fail).
+        System.out.println("enter a grade");
+        char grade=input.next().charAt(0);
+        switch (grade){
+            case 'A':
+                System.out.println("Excellent");
+                break;
+            case 'B':
+                System.out.println("Good");
+                break;
+            case 'C':
+                System.out.println("Average");
+                break;
+            case 'D':
+                System.out.println("Below Average");
+                break;
+            case 'F':
+                System.out.println("Fail");
+                break;
+        }
 
 //    Question 5:
 //    Write a Java program using a switch case that takes a shape name ("circle", "rectangle", "triangle") as input
 //    and calculates the area of the corresponding shape based on additional input parameters.
+
+        System.out.println("enter a shape name");
+        String shape=input.next();
+
+        switch (shape){
+            case "circle":
+                System.out.println("enter radius");
+                double radius=input.nextDouble();
+                System.out.println( "area of the circle: "+Math.PI*radius*radius);
+                break;
+            case "rectangle":
+                System.out.println("enter length");
+                double length=input.nextDouble();
+                System.out.println("enter width");
+                double width=input.nextDouble();
+                System.out.println("area of rectangle: "+length*width);
+                break;
+            case "triangle":
+                System.out.println("enter height");
+                double height=input.nextDouble();
+                System.out.println("enter base");
+                double base=input.nextDouble();
+                System.out.println("area of triangle: "+(base*height)/2);
+                break;
+        }
     }
 }
